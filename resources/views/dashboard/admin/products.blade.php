@@ -3,11 +3,12 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="page-titles">
+    <div class="page-titles d-flex justify-content-between align-items-center">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
             <li class="breadcrumb-item active"><a href="javascript:void(0)">Product Lists</a></li>
         </ol>
+        <a href="{{ route('create-product') }}" class="btn btn-primary">+ Create Product</a>
     </div>
     <div class="row">
         @foreach($products as $key => $data)

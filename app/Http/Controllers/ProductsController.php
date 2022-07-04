@@ -26,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.admin.create-product');
     }
 
     /**
@@ -51,7 +51,7 @@ class ProductsController extends Controller
         }
         $input['encrypted_id'] = Str::random(100);
         Products::create($input);
-        return redirect('products')->with('success','Post created successfully.');
+        return redirect('products')->with('success','Product created successfully.');
     }
 
     /**
